@@ -30,9 +30,9 @@ public class App {
 
         Arrays.stream(response.getAllHeaders()).forEach(System.out::println);
 
-        List<Cat> cats = mapper.readValue(response.getEntity().getContent(), new TypeReference<List<Cat>>() {});
+        List<CatFact> catFacts = mapper.readValue(response.getEntity().getContent(), new TypeReference<List<CatFact>>() {});
 
-        Stream<Cat> stream = cats.stream();
+        Stream<CatFact> stream = catFacts.stream();
         stream.filter(value -> value.isUsed() == true)
                 .forEach(System.out::println);
     }

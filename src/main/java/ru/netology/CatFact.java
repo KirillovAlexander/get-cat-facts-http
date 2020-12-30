@@ -2,7 +2,7 @@ package ru.netology;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Cat {
+public class CatFact {
     private final Status status;
     private final String type;
     private final boolean deleted;
@@ -15,7 +15,7 @@ public class Cat {
     private final String createdAt;
     private final boolean used;
 
-    public Cat(
+    public CatFact(
             @JsonProperty("status") Status status,
             @JsonProperty("type") String type,
             @JsonProperty("deleted") boolean deleted,
